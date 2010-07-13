@@ -7,9 +7,8 @@
 
 #include <LED.h>
 
-const int LEDS_LENGTH = 3;
-
-int leds[LEDS_LENGTH] = {0, 1, 2};
+const int LEDS_LENGTH = 4;
+int leds[LEDS_LENGTH] = {0, 1, 2, 3};
 int x = 0;
 
 void setup() {
@@ -21,9 +20,11 @@ void setup() {
 void loop() {
   if (x < 25) {
     for (size_t i = 0; i < LEDS_LENGTH; i++) {
-      led_on(leds[i]);
-      delay(25);
-      led_off(leds[i]);
+      if (rand() % 2 == 1) {
+        led_on(leds[i]);
+      } else {
+        led_off(leds[i]);
+      }
       delay(25);
     }
   }
