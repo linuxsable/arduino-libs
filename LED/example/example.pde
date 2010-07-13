@@ -20,11 +20,9 @@ void setup() {
 void loop() {
   if (x < 25) {
     for (size_t i = 0; i < LEDS_LENGTH; i++) {
-      if (rand() % 2 == 1) {
-        led_on(leds[i]);
-      } else {
-        led_off(leds[i]);
-      }
+      led_on(leds[i]);
+      delay(25);
+      led_off(leds[i]);
       delay(25);
     }
   }
