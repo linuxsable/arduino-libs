@@ -18,6 +18,7 @@ void led_all_off(int leds[], int leds_length);
 
 void led_flash_all(int leds[], int leds_length, int speed);
 void led_sequence_all(int leds[], int leds_length, int speed);
+void led_sequence_up_and_down_all(int leds[], int leds_length, int speed);
 void led_pulsate_and_sequence_all(int leds[], int leds_length, int speed);
 
 #endif
